@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,46 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    <div class="wrapper">
-        <form action="#">
-            <input type="file" hidden>
-            <img src="qrkod1.png" alt="qr-kod">
-            <div class="content">
-                <i class="fa-solid fa-cloud-arrow-up"></i>
-                <p>Upload QR Code to Scan</p>
+   
+        <div class="reader">
+
+            <form action="#">
+                <input type="file" hidden>
+                <img src="" alt="qr-kod">
+                <div class="content">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Upload QR Code to Scan</p>
+                </div>
+            </form>
+            <div class="details">
+                <textarea disabled></textarea>
+                <div class="buttons">
+                    <button class="close">Close</button>
+                    <button class="copy">Copy Text</button>
+                </div>
             </div>
-        </form>
-        <div class="details">
-            <textarea disabled></textarea>
-            <div class="buttons">
-                <button class="close">Close</button>
-                <button class="copy">Copy Text</button>
+
+        </div>
+
+        <div class="generator">
+
+
+            <header>
+                <h1>QR Code Generator</h1>
+                <p>Paste a url or enter text to create QR code</p>
+            </header>
+            <div class="form-generator">
+                <input type="text" placeholder="Enter text or url">
+                <button>Generate QR code</button>
+            </div>
+            <div class="qr-code">
+                <img src="" alt="new-qr-code">
             </div>
         </div>
-    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

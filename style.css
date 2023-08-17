@@ -1,35 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    display: flex;
+body {
+    display:flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     min-height: 100vh;
     background: #1e293b;
 }
 
-.wrapper{
+
+
+
+.reader {
     height: 270px;
     width: 420px;
     border-radius: 7px;
     background: #334155;
     padding: 30px 30px 35px;
-    transition:  height 0.2s ease;
+    transition: height 0.2s ease;
+
+
 }
 
-.wrapper.active{
-    height: 525px;
+.reader.active {
+    height: 530px;
 }
 
-.wrapper form{
+.reader form {
     height: 210px;
     cursor: pointer;
     background: #f8fafc;
@@ -39,51 +45,54 @@ body{
     justify-content: center;
     border-radius: 7px;
     text-align: center;
-    transition:  height 0.2s ease;
+    transition: height 0.2s ease;
 }
-.wrapper.active form{
+
+.reader.active form {
     height: 225px;
     pointer-events: none;
 }
 
 
-.wrapper form img{
+.reader form img {
     display: none;
     max-width: 148px;
 }
 
-.wrapper.active form img{
+.reader.active form img {
     display: block;
 }
 
-.wrapper.active form .content{
+.reader.active form .content {
     display: none;
 }
-form .content i{
-    color:#334155;
+
+form .content i {
+    color: #334155;
     font-size: 55px;
 }
 
-form .content p{
+form .content p {
     color: #334155;
     margin-top: 15px;
     font-size: 16px;
 }
 
 
-.wrapper .details{
+.reader .details {
     opacity: 0;
     pointer-events: none;
     margin-top: 25px;
 
 }
-.wrapper.active .details{
+
+.reader.active .details {
     opacity: 1;
     pointer-events: auto;
-    transition:opacity 0.5s 0.05s ease;
+    transition: opacity 0.5s 0.05s ease;
 }
 
-.details textarea{
+.details textarea {
     width: 100%;
     height: 128px;
     outline: none;
@@ -95,20 +104,101 @@ form .content p{
     border: 1px solid #838587;
 }
 
-.details .buttons{
+.details .buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.buttons button{
+.buttons button {
     height: 55px;
     outline: none;
     border: none;
-    color:#1e293b;
+    color: #1e293b;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     border-radius: 5px;
     width: calc(100% / 2 - 10px);
 }
+
+/*=================qr-code generator=====================*/
+
+.generator {
+
+    height: 270px;
+    width: 420px;
+    border-radius: 7px;
+    background: #334155;
+    padding: 16px 25px;
+    transition: height 0.2s ease;
+
+
+}
+
+.generator.active {
+    height: 530px;
+
+}
+
+header h1 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #ccc;
+    text-align: center;
+
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #ccc;
+
+}
+
+.generator .form-generator {
+    margin: 20px 0 25px;
+
+}
+
+.form-generator :where(input, button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form-generator input {
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #ccc
+}
+
+.form-generator button {
+    background: #ccc;
+    color: #334155;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.generator .qr-code {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+.generator.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+
