@@ -202,3 +202,22 @@ header p {
 }
 
 
+/*media*/
+
+@media screen and (max-width:600px) {
+    body{
+        flex-direction: column;
+    }
+
+    .reader,
+    .generator {
+        height: 270px;
+        width: 300px;
+        
+    }
+
+
+
+}
+
+
